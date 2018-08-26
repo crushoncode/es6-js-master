@@ -66,3 +66,11 @@ const users = [
 const filteredUsers = users.filter((user) => user.admin);
 
 console.log(filteredUsers);
+
+// Implementing 'reject'
+
+// Reject should work in the opposite way of 'filter' - if a function returns 'true', the item should *not* be included in the new array.
+//  whatever function anyone runs on this item in whatever array this is, it'll only be returned if it comes back false
+const reject = (array, iteratorFunc) => {
+  return array.filter((x) => !iteratorFunc(x));
+};
