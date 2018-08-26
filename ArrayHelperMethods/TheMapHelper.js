@@ -53,8 +53,27 @@ const trips = [
   { distance: 59, time: 25 }
 ];
 
+const speeds = trips.map((trip) => trip.distance / trip.time);
+
+speeds;
+
+// Return is implied when it is done on the same line.
+// It’s not implied when the callback runs over multiple lines.
+
+const trips = [
+  { distance: 34, time: 10 },
+  { distance: 90, time: 50 },
+  { distance: 59, time: 25 }
+];
+
 const speeds = trips.map((trip) => {
   return trip.distance / trip.time;
 });
 
 speeds;
+
+// implementing 'pluck'
+
+const pluck = (array, property) => {
+  return array.map((obj) => obj[property]);
+};
